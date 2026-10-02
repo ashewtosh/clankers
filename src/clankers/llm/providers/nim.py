@@ -24,7 +24,6 @@ class NIMProvider:
             response = await client.post(
                 f"{self.base_url}/chat/completions",
                 headers={
-                    "Authorization": f"Bearer {self.api_key}",
                     "Content-Type": "application/json",
                 },
                 json=payload
