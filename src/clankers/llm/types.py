@@ -14,3 +14,10 @@ class LLMResponse:
     content: str
     model: str
     raw: dict[str, Any] = field(default_factory=dict)
+
+@dataclass(frozen=True, slots=True)
+class LLMChunk:
+    content: str
+    model: str
+    done: bool = False
+    raw: dict[str, Any] = field(default_factory=dict)
